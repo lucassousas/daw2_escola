@@ -24,6 +24,18 @@
                 </div>
             </nav>
 
+            <?php if(Session::get("status") == "salvo"): ?>
+                <div class="alert alert-success">
+                    Salvo com sucesso!
+                </div>
+            <?php endif; ?>
+
+            <?php if(Session::get("status") == "excluido"): ?>
+                <div class="alert alert-danger">
+                    Excluído com sucesso!
+                </div>
+            <?php endif; ?>
+
             <?php echo $__env->yieldContent("formulario"); ?>
             <?php echo $__env->yieldContent("tabela"); ?>
         </div>
